@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Convert Image to Text</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+         
+    </head>
+    <body>
+        <div class="header">
+            <h1>Convert Image to Text</h1>
+        </div>
+        <div class="container">
+            <form action="{{ url_for('upload_file') }}" enctype="multipart/form-data", method="post">
+                <label for="img">Choose an image:</label>
+                <input id="img", name="img", type="file"/>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+        {% if img %}
+        <div class="image-container">
+            <div class="image-wrapper">
+                <h2>Image</h2>
+                <img src="{{ img }}" alt="Uploaded Image" class="uploaded-image">
+            </div>
+            <div class="extracted-text">
+                <h2>Extracted Text</h2>
+                <ul>
+                    {% for text in extracted_text %}
+                    <li>{{ text }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        {% else %}
+        <h1>Image will be render here....</h1>
+        {% endif %}
+        <div class="footer">
+            <p>Created by Fatemeh Saveh | CS50x Final Project</p>
+        </div>
+        <script src="{{ url_for('static', filename='js/custom.js') }}"></script>
+    </body>
+</html>
+        
+      
+ 
+        
+    
+        
+ 

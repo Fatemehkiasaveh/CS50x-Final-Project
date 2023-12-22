@@ -1,0 +1,58 @@
+ 
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F5F5F5;
+}
+
+.header {
+    background-color: #BDBDBD;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+.container {
+    max-width: 800px;
+    margin: 1 auto;
+    padding: 10px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+    margin-top: 10px;
+    width: 40%; /* Set a width for the container */
+}
+.image-wrapper {
+    text-align:left;
+}
+ 
+.uploaded-image {
+    max-width: 50%; /* Set maximum width to prevent the image from exceeding its container */
+    max-height: 50%; /* Set maximum height */
+    border: 2px solid #333;
+    display: block; /* Ensures the image is displayed as a block element */
+    margin-bottom: 20px;
+}
+
+.extracted-text {
+    display: flex; /* Sets the display type to flex */
+    flex-direction: column; /* Arranges items vertically in a column */
+    align-items: flex-start; /* Aligns items to the start of the column */
+    margin-top: 10px; /* Adds margin space at the top */
+    width: 20%; /* Sets a width for the container */
+}
+
+
+
+.footer {
+    text-align: center;
+    background-color: #424242;
+    color: #fff;
+    padding: 2px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+} 
